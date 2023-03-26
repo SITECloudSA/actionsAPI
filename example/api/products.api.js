@@ -1,4 +1,4 @@
-const { apiRouter, QUERY } = require("../../index");
+const { apiRouter, QUERY } = require("actionsAPI");
 const cont = require("../controller");
 
 const app = apiRouter();

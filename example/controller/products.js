@@ -5,6 +5,6 @@ const products = [
 
 const getAllProducts = () => products;
 
-const getProduct = ({ name }) => products.find((p) => p.name === name);
+const getProduct = ({ name }) => products.find((p) => p.name === name) || { message: "Product not found" };
 
 module.exports = { getAllProducts, getProduct };
