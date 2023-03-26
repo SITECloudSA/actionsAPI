@@ -1,1 +1,5 @@
 # actionsAPI
+
+```
+npm run dev
+```
