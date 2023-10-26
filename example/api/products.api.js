@@ -1,9 +1,9 @@
-const { apiRouter, QUERY } = require("actionsAPI");
+const { apiRoutes, QUERY } = require("actionsAPI");
 const cont = require("../controller");
 
-const app = apiRouter();
+const routes = apiRoutes();
 
-app.get("/", cont.getAllProducts);
-app.get("/name", cont.getProduct, { name: QUERY });
+routes.get("/", cont.getAllProducts);
+routes.get("/name", cont.getProduct, { name: QUERY });
 
-module.exports = app;
+module.exports = routes;

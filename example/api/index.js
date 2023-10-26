@@ -1,18 +1,14 @@
 // this is a typical express app
 
-const express = require("actionsAPI");
-const apiApp = express();
+const { ApiApp } = require("actionsAPI");
 
-const users = require("./user.api");
-const products = require("./products.api");
+ApiApp.PreAction(({ action, input, route, req, res, context }) => {
+  console.log(`You are about to excute an action called`, action.name);
+  return input;
+});
 
-const apiFiles = { users, products };
+ApiApp.use("/users", require("./user.api"));
+ApiApp.use("/products", require("./products.api"));
+ApiApp.use("/docs", ApiApp.generateDocs());
 
-Object.keys(apiFiles).forEach((k) => apiApp.use(`/${k}`, apiFiles[k]));
-/*
-The above is equavlent to but in one line:
-apiApp.use('/users', users)
-apiApp.use('/products', products)
-*/
-
-module.exports = { apiFiles, apiApp };
+module.exports = ApiApp;
