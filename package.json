@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon -r ./lib/devAliasLoader.js example/"
+    "dev": "npm run dev:express",
+    "dev:express": "nodemon -r ./lib/devAliasLoader.js examples/express",
+    "dev:next": "cd ./examples/next && npm run dev"
   },
   "repository": {
     "type": "git",
