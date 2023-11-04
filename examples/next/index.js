@@ -1,5 +1,5 @@
 const next = require("next");
-const actionApi = require("../../index");
+const actionApi = require("actionsapi");
 const ApiApp = require("./server/api");
 
 const app = next({ dev: true });

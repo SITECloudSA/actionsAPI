@@ -1,4 +1,4 @@
-const { ApiApp } = require("../../../../index");
+const { ApiApp } = require("actionsapi");
 
 ApiApp.PreAction(({ action, input, route, req, res, context }) => {
   console.log(`You are about to excute an action called`, action.name);
