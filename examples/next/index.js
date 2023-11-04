@@ -1,8 +1,8 @@
 const next = require("next");
-const actionApi = require("../../../../index");
+const actionApi = require("../../index");
 const ApiApp = require("./server/api");
 
-const app = next();
+const app = next({ dev: true });
 const port = 3001;
 app.prepare().then(() => {
   const actionApiServer = actionApi();
@@ -11,5 +11,5 @@ app.prepare().then(() => {
 
   actionApiServer.get("*", (req, res) => res.status(404).json("Page not found"));
 
-  actionApiServer.listen(port, () => console.log(`Example app listening on port ${port}`));
+  actionApiServer.listen(port, () => console.log(`Example NEXT app listening on port ${port}`));
 });
