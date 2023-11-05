@@ -1,3 +1,2 @@
-export default function handler(req: any, res: any) {
-  res.status(200).json("hi");
-}
+import ActionsApi from "../../server/api/index.js";
+export default ActionsApi;
