@@ -1,7 +1,7 @@
-const { apiRoutes, QUERY } = require("actionsapi");
+const { apiRoute, QUERY } = require("actionsapi");
 const cont = require("../controller");
 
-const routes = apiRoutes();
+const routes = apiRoute();
 
 routes.get("/", cont.getAllProducts);
 routes.get("/name", cont.getProduct, { name: QUERY });

@@ -1,7 +1,7 @@
-const { apiRoutes, PARAM, BODY } = require("actionsapi");
+const { apiRoute, PARAM, BODY } = require("actionsapi");
 const cont = require("../controller");
 
-const routes = apiRoutes();
+const routes = apiRoute();
 
 routes.get("/", cont.getAllUsers);
 routes.get("/{name}", cont.getUser, { name: PARAM });
