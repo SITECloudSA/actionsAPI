@@ -1,4 +1,4 @@
-const { apiRoutes, QUERY } = require("actionsAPI");
+const { apiRoutes, QUERY } = require("actionsapi");
 const cont = require("../controller");
 
 const routes = apiRoutes();

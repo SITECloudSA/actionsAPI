@@ -1,0 +1,12 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "An example of an express app that uses actionsapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alaa",
+  "license": "ISC",
+  "dependencies": {}
+}

@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev:prepare": "node ./scripts/dev.js",
     "dev": "npm run dev:express",
-    "dev:express": "nodemon -r ./lib/devAliasLoader.js examples/express",
-    "dev:next": "npm run dev:prepare && cd ./examples/next && npm run dev"
+    "dev:express": "npm link && cd ./examples/express && npm link actionsapi && node .",
+    "dev:next": "npm link && cd ./examples/next && npm link actionsapi && npm run dev"
   },
   "repository": {
     "type": "git",
