@@ -1,13 +1,16 @@
-const { apiRouter, apiApp } = require("actionsapi");
+const { apiRouter, apiApp } = require("actionapi");
 
-apiRouter.PreAction(({ action, input, route, req, res, context }) => {
+apiApp.PreAction(({ action, input, route, req, res, context }) => {
   console.log(`You are about to excute an action called`, action.name);
   return input;
 });
 
 apiRouter.use("/users", require("./user.api"));
 apiRouter.use("/products", require("./products.api"));
-apiRouter.use("/docs", apiRouter.generateDocs());
+apiRouter.use("/docs", apiApp.generateDocs());
 
 apiApp.use("/api", apiRouter);
+
+apiApp.use("*", apiApp.notFoundRequest);
+
 module.exports = apiApp;

@@ -1,4 +1,4 @@
-const { apiRoutes, PARAM, BODY } = require("actionsapi");
+const { apiRoutes, PARAM, BODY } = require("actionapi");
 const cont = require("../controller");
 
 const routes = apiRoutes();

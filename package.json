@@ -1,12 +1,13 @@
 {
-  "name": "actionsapi",
-  "version": "0.0.1",
+  "name": "actionapi",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run dev:express",
-    "dev:express": "npm link && cd ./examples/express && npm link actionsapi && node .",
-    "dev:next": "npm link && cd ./examples/next && npm link actionsapi && npm run dev"
+    "dev": "npm run dev:complex",
+    "dev:simple": "npm link && cd ./examples/simple && npm link actionapi && node index",
+    "dev:complex": "npm link && cd ./examples/complex && npm link actionapi && node .",
+    "dev:next": "npm link && cd ./examples/next && npm link actionapi && npm run dev"
   },
   "repository": {
     "type": "git",
