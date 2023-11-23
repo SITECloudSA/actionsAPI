@@ -1,9 +1,9 @@
-# actionsAPI
+# actionAPI
 
 ## Usage
 
 ```
-npm i --save actionsapi
+npm i --save actionapi
 ```
 
 ## devlope

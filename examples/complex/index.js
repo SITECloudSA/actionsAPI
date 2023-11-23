@@ -1,10 +1,12 @@
 const { apiApp } = require("actionapi");
-const app = require("./api");
+const appRouter = require("./api");
+
+const app = apiApp();
 
 const port = 3001;
 
-apiApp.use("/api", app);
+app.use("/api", appRouter);
 
-apiApp.use("*", apiApp.notFoundRequest);
+app.use("*", app.notFoundRequest);
 
-apiApp.listen(port, () => console.log(`Example app listening on port ${port}`));
+app.listen(port, () => console.log(`Example app listening on port ${port}`));
