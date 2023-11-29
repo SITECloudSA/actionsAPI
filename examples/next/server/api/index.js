@@ -12,6 +12,8 @@ apiRouter.use("/users", require("./user.api"));
 apiRouter.use("/products", require("./products.api"));
 apiRouter.use("/docs", apiRouter.generateDocs());
 
+apiRouter.generateSDK();
+
 app.use("/api", apiRouter);
 
 app.use("*", app.notFoundRequest);
