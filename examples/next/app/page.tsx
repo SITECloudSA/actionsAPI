@@ -2,7 +2,9 @@
 
 import { useEffect } from "react";
 import styles from "./page.module.css";
-import { SDK } from "../sdk.gen";
+import { SDK, setSdkConfig } from "../sdk.gen";
+
+setSdkConfig({ baseUrl: "/api" });
 
 export default function Home() {
   const fetch = async () => {
