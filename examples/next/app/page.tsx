@@ -2,9 +2,7 @@
 
 import { useEffect } from "react";
 import styles from "./page.module.css";
-import { SDK, setSdkConfig } from "../sdk.gen";
-
-setSdkConfig({ baseUrl: "/api" });
+import { SDK } from "../sdk.gen";
 
 export default function Home() {
   const fetch = async () => {
@@ -13,7 +11,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    console.log("hereee");
     fetch();
   }, []);
   return (
