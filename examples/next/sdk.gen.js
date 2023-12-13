@@ -4,7 +4,11 @@ import sdkFetch, { setConfig } from "actionapi/lib/fetcher";
 
 setConfig({ baseUrl: "/api" });
 
-/** @type {import("actionapi/lib/type").SetSdkConfig}*/
+/**
+ *
+ * @type {import("actionapi/lib/type").SetSdkConfig} setSdkConfig
+ * @returns void
+ */
 export const setSdkConfig = (globalconfig) => setConfig(globalconfig);
 
 export const SDK = {
