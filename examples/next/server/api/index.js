@@ -4,7 +4,7 @@ const apiRouter = apiApp();
 const app = apiApp();
 
 apiRouter.PreAction(({ action, input, route, req, res, context }) => {
-  console.log(`You are about to excute ann action called`, action.name);
+  console.log(`You are about to excute an action called`, action.name);
   return input;
 });
 

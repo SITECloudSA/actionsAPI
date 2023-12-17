@@ -3,7 +3,15 @@ const users = [
   { name: "adam", age: "23" },
 ];
 
-const getAllUsers = () => users;
+const sleep = (time = 1500) =>
+  new Promise((res, rej) => {
+    setTimeout(() => res(), time);
+  });
+
+const getAllUsers = async () => {
+  await sleep();
+  return users;
+};
 const addUser = ({ name, age }) => users.push({ name, age });
 
 const getUser = ({ name }) => users.find((u) => u.name === name) || { message: "user not found" };

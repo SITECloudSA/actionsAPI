@@ -18,9 +18,9 @@ export const SDK = {
 
 getAllProducts: () => sdkFetch('getAllProducts', 'GET', `/products/`, {} ),
 getProduct: ({name}) => sdkFetch('getProduct', 'GET', `/products/name?name=${name || ""}`, {name} ),
-getAllUsers: () => sdkFetch('getAllUsers', 'GET', `/users/`, {} ),
 getUser: ({name}) => sdkFetch('getUser', 'GET', `/users/${name}`, {name} ),
 addUser: ({name,age}) => sdkFetch('addUser', 'POST', `/users/`, {name,age} , {name,age}),
+getAllUsers: () => sdkFetch('getAllUsers', 'GET', `/users/`, {} ),
 
 }
 
@@ -28,13 +28,13 @@ export const useSdk = {
 
 getAllProducts: () => useSdkFetch('getAllProducts', 'GET', `/products/`, {} ),
 getProduct: ({name}) => useSdkFetch('getProduct', 'GET', `/products/name?name=${name || ""}`, {name} ),
-getAllUsers: () => useSdkFetch('getAllUsers', 'GET', `/users/`, {} ),
 getUser: ({name}) => useSdkFetch('getUser', 'GET', `/users/${name}`, {name} ),
+getAllUsers: () => useSdkFetch('getAllUsers', 'GET', `/users/`, {} ),
 
 }
 
 export const ACTIONS = {
 
-getAllProducts: 'getAllProducts',getProduct: 'getProduct',getAllUsers: 'getAllUsers',getUser: 'getUser',addUser: 'addUser',
+getAllProducts: 'getAllProducts',getProduct: 'getProduct',getUser: 'getUser',addUser: 'addUser',getAllUsers: 'getAllUsers',
 }
 

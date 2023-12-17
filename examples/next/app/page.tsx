@@ -2,7 +2,9 @@
 
 import { useEffect } from "react";
 import styles from "./page.module.css";
-import { SDK, useSdk } from "../sdk.gen";
+import { SDK, useSdk, setSdkConfig } from "../sdk.gen";
+
+setSdkConfig({ indexdbPrefix: "testActionApi" });
 
 export default function Home() {
   const fetch = async () => {
@@ -14,11 +16,12 @@ export default function Home() {
   console.log({ data, loading });
 
   useEffect(() => {
-    fetch();
+    // fetch();
   }, []);
+
   return (
     <main className={styles.main}>
-      <div className={styles.grid}></div>
+      <div className={styles.grid}>{loading ? "loading" : JSON.stringify(data)}</div>
     </main>
   );
 }
