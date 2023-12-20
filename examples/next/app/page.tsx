@@ -13,10 +13,19 @@ export default function Home() {
   };
 
   const { data, loading } = useSdk.getAllUsers();
-  console.log({ data, loading });
 
   useEffect(() => {
     // fetch();
+    const exampleSocket = new WebSocket("wss://3000.code.cloud.site.sa/websockets");
+    exampleSocket.onopen = () => {
+      console.log("ws opened on browser");
+      exampleSocket.send("message");
+    };
+
+    exampleSocket.onmessage = (message) => {
+      console.log(`message received`, message.data);
+    };
+    console.log({ exampleSocket });
   }, []);
 
   return (
