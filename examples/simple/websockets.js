@@ -3,8 +3,9 @@ const WebSocket = require("ws");
 module.exports = (expressServer, path) => {
   const websocketServer = new WebSocket.Server({
     noServer: true,
+    path: path || "/ws",
   });
-  console.log("init sockett");
+  console.log("init sockets");
   expressServer.on("upgrade", (request, socket, head) => {
     console.log("upgrading...");
     websocketServer.handleUpgrade(request, socket, head, (websocket) => {

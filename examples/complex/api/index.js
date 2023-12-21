@@ -8,6 +8,8 @@ app.PreAction(({ action, input, route, req, res, context }) => {
 
 app.use("/users", require("./user.api"));
 app.use("/products", require("./products.api"));
-app.use("/docs", app.generateDocs());
+
+app.generateDocs();
+app.generateSDK();
 
 module.exports = app;

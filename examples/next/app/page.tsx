@@ -16,7 +16,7 @@ export default function Home() {
 
   useEffect(() => {
     // fetch();
-    const exampleSocket = new WebSocket("wss://3000.code.cloud.site.sa/websockets");
+    const exampleSocket = new WebSocket("wss://3000.code.cloud.site.sa/");
     exampleSocket.onopen = () => {
       console.log("ws opened on browser");
       exampleSocket.send("message");
