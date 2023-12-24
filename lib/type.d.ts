@@ -1,6 +1,6 @@
 export interface SdkConfig {
   baseUrl?: string;
-  useSockets?: boolean;
+  disableSocket?: boolean;
   onStart?({ action, method, path, input, body, isHook, config }): void;
   onSuccess?({ data, response, action, method, path, input, body, isHook }): void;
   onComplete?({ data, response, error, action, method, path, input, body, isHook }): void;

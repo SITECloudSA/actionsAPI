@@ -10,11 +10,13 @@ apiRouter.PreAction(({ action, input, route, req, res, context }) => {
 
 apiRouter.use("/users", require("./user.api"));
 apiRouter.use("/products", require("./products.api"));
-apiRouter.use("/docs", apiRouter.generateDocs());
-
+apiRouter.generateDocs();
+apiRouter.generateSDK({ prefix: "/api" });
 app.use("/api", apiRouter);
 
-app.generateSDK();
-app.use("*", app.notFoundRequest);
+app.use("*", (req, res) => {
+  console.log("ss", req.url);
+  res.end();
+});
 
 module.exports = app;

@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import styles from "./page.module.css";
 import { SDK, useSdk, setSdkConfig } from "../sdk.gen";
+import { io } from "socket.io-client";
 
 setSdkConfig({ indexdbPrefix: "testActionApi" });
 
@@ -17,6 +18,8 @@ export default function Home() {
 
   useEffect(() => {
     // fetch();
+    const socket = io({ path: "/api/ws" });
+    socket.emit("event", { name: "test" });
   }, []);
 
   return (
