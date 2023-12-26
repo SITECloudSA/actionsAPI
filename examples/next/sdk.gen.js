@@ -5,6 +5,8 @@ import sdkFetch, { setConfig } from "actionapi/lib/fetcher"
 
 import useSdkFetch from "actionapi/lib/useFetcher"
 
+setConfig({ baseUrl: '/api', disableSocket: false })
+
 /**
   *
   * @type {import("actionapi/lib/type").SetSdkConfig} setSdkConfig

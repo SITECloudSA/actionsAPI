@@ -19,7 +19,10 @@ export default function Home() {
   useEffect(() => {
     // fetch();
     const socket = io({ path: "/api/ws" });
-    socket.emit("event", { name: "test" });
+    socket.emit("action", { action: "getAllUsers" });
+    socket.on("getAllUsers", ({ data }) => {
+      console.log({ bingo: data });
+    });
   }, []);
 
   return (
