@@ -13,16 +13,16 @@ export default function Home() {
     console.log({ users });
   };
 
-  const { data, loading } = useSdk.getAllUsers();
+  const { data, loading, ...res } = useSdk.getAllProducts();
   console.log({ data, loading });
 
   useEffect(() => {
     // fetch();
-    const socket = io({ path: "/api/ws" });
-    socket.emit("action", { action: "getAllUsers" });
-    socket.on("getAllUsers", ({ data }) => {
-      console.log({ bingo: data });
-    });
+    // const socket = io({ path: "/api/ws" });
+    // socket.emit("action", { action: "getAllUsers" }, (e) => console.log({ e }));
+    // socket.on("getAllUsers", ({ data }) => {
+    //   console.log({ bingo: data });
+    // });
   }, []);
 
   return (
