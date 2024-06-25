@@ -92,6 +92,6 @@ app.generateSDK({
 
     path: "/ws", // api path where socket will be listening
 
-    sdkFile: "sdk.gen.js", // path to where the genereated sdk file will be located
+    sdkFolder: "actions", // path to where the genereated sdk file will be located
 });
 ```

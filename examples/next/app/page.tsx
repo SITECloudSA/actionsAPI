@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import styles from "./page.module.css";
-import { SDK, useSdk, setSdkConfig } from "../sdk.gen";
+import { SDK, useSdk, setSdkConfig } from "../actions";
 
 setSdkConfig({ indexdbPrefix: "testActionApi", onComplete: (e) => console.log("completed") });
 

@@ -12,7 +12,7 @@ apiRouter.use("/users", require("./user.api"));
 apiRouter.use("/products", require("./products.api"));
 app.use("/api", apiRouter);
 app.generateDocs();
-app.generateSDK();
+app.generateSDK({ reactHooks: true });
 
 app.use("*", (req, res) => {
   res.end();
