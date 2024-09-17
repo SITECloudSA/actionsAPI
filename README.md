@@ -2,11 +2,17 @@
 
 An open-source solution developed by the Cloud Solutions' team at [SITE](https://site.sa/en). This package assists developers in generating SDKs for their applications and producing API Swagger documentation.
 
+The package supports the following:
+
+- [React](https://react.dev/)
+- [Next.js](https://nextjs.org/)
+- [Express.js](https://expressjs.com/)
+
 ## Features
 
 - ### websockets:
 
-  Developers can implement REST APIs like what they normally would. However, `actionAPI` will use socket under the hood to communicate with the client. Developers can also configure `GET` APIs (individualy or globally) to peridically fetch from the server. Hence, giving the end-users real-time experience.
+  Developers can implement REST APIs like what they normally would. However, `actionAPI` will use socket under the hood to communicate with the client. When using [React](https://react.dev/), developers can also configure `GET` APIs (individualy or globally) to periodically fetch from the server. Hence, giving end-users real-time experience.
 
 - ### SDK
 
@@ -14,10 +20,10 @@ An open-source solution developed by the Cloud Solutions' team at [SITE](https:/
 
   SDK as functions (e.g. `sdk.getProducts()`)
 
-  SDH as React Hooks (e.g. `useSdk.getProducts()`)
+  SDH as React Hooks (e.g. `useSdk.getProducts()`) - generating hooks can be optionally truned off.
 
 - ### Swagger Documentation
-  `actionApi` will auto-generate swagger file as soon as developers writes new API in his application.
+  `actionApi` will auto-generate swagger documentation as soon as developers writes new API in his application.
 
 ## Installation
 
