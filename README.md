@@ -20,7 +20,7 @@ The package supports the following:
 
   SDK as functions (e.g. `sdk.getProducts()`)
 
-  SDH as React Hooks (e.g. `useSdk.getProducts()`) - generating hooks can be optionally truned off.
+  SDK as React Hooks (e.g. `useSdk.getProducts()`) - generating hooks can be optionally truned off.
 
 - ### Swagger Documentation
   `actionApi` will auto-generate swagger documentation as soon as developers writes new API in his application.
