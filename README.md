@@ -1,5 +1,24 @@
 # actionAPI
 
+An open-source solution developed by the Cloud Solutions' team at [SITE](https://site.sa/en). This package assists developers in generating SDKs for their applications and producing API Swagger documentation.
+
+## Features
+
+- ### websockets:
+
+  Developers can implement REST APIs like what they normally would. However, `actionAPI` will use socket under the hood to communicate with the client. Developers can also configure `GET` APIs (individualy or globally) to peridically fetch from the server. Hence, giving the end-users real-time experience.
+
+- ### SDK
+
+  using `generateSDK()` , the library will generate two types of SDK:
+
+  SDK as functions (e.g. `sdk.getProducts()`)
+
+  SDH as React Hooks (e.g. `useSdk.getProducts()`)
+
+- ### Swagger Documentation
+  `actionApi` will auto-generate swagger file as soon as developers writes new API in his application.
+
 ## Installation
 
 ```
