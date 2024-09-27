@@ -40,12 +40,16 @@ const { apiApp, apiRoutes } = require("actionapi");
 
 const routes = apiRoutes();
 const app = apiApp();
+
 const testAction = () => ({ test: "alll" });
 routes.get("/test", testAction);
 
+app.use("/api", routes);
 app.generateDocs();
 app.generateSDK();
-app.use("/api", routes);
+app.listen(3000)
+
+
 ```
 
 ### 2- Using SDK without react hooks
